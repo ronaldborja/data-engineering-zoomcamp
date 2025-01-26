@@ -1,0 +1,14 @@
+$URL="http://localhost:8000/green_tripdata_2019-10.csv"
+
+docker run -it \ 
+    --network=week1_default \
+    data_ingestion:v001 \
+    --user=postgres \
+    --password=postgres \
+    --host=postgres \
+    --port=5432 \
+    --db=ny_taxi \
+    --tb=yellow_taxi_trips \
+    --url=${URL}
+
+ docker run -it   --network=week1_default   data_ingestion:v001     --user=postgres     --password=postgres     --host=postgres     --port=5432     --db=ny_taxi     --tb=yellow_taxi_trips     --url=${URL}
